@@ -1,0 +1,144 @@
+{% extends "store/base.html" %}
+
+
+{% block title %}Home | StyleHub{% endblock %}
+
+
+{% block content %}
+<!-- Banner -->
+<section class="hero-section text-white text-center py-5 bg-dark">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold">Welcome to StyleHub</h1>
+
+
+        <p class="lead">
+            Discover clothing that matches your style.
+        </p>
+
+
+        <a
+            href="{% url 'store:product_list' %}"
+            class="btn btn-light btn-lg"
+        >
+            Shop Now
+        </a>
+    </div>
+</section>
+
+
+<!-- Categories -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Shop by Category</h2>
+
+
+    <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+            <a
+                href="{% url 'store:product_list' %}?category=men"
+                class="text-decoration-none"
+            >
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body py-4">
+                        <h4 class="text-dark mb-0">Men</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="col-6 col-md-3">
+            <a
+                href="{% url 'store:product_list' %}?category=women"
+                class="text-decoration-none"
+            >
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body py-4">
+                        <h4 class="text-dark mb-0">Women</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="col-6 col-md-3">
+            <a
+                href="{% url 'store:product_list' %}?category=kids"
+                class="text-decoration-none"
+            >
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body py-4">
+                        <h4 class="text-dark mb-0">Kids</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="col-6 col-md-3">
+            <a
+                href="{% url 'store:product_list' %}?category=accessories"
+                class="text-decoration-none"
+            >
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body py-4">
+                        <h4 class="text-dark mb-0">Accessories</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Featured products -->
+<section class="container pb-5">
+    <h2 class="text-center mb-4">Featured Products</h2>
+
+
+    <div class="row g-4">
+        {% for product in featured_products %}
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img
+                        src="{{ product.image.url }}"
+                        class="card-img-top"
+                        alt="{{ product.name }}"
+                        style="height: 280px; object-fit: cover;"
+                    >
+
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">
+                            {{ product.name }}
+                        </h5>
+
+
+                        <p class="card-text">
+                            {{ product.description|truncatewords:12 }}
+                        </p>
+
+
+                        <p class="fs-5 fw-bold mt-auto">
+                            ${{ product.price }}
+                        </p>
+
+
+                        <a
+                            href="{% url 'store:product_detail' product.id %}"
+                            class="btn btn-dark"
+                        >
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info text-center">
+                    No featured products have been selected.
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

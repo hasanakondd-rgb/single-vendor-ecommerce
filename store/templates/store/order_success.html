@@ -1,0 +1,32 @@
+{% extends "store/base.html" %}
+
+
+{% block title %}Order Successful | StyleHub{% endblock %}
+
+
+{% block content %}
+<div class="container py-5 text-center">
+    <div class="card shadow-sm mx-auto success-card">
+        <div class="card-body p-5">
+            <div class="display-1 text-success mb-3">✓</div>
+
+
+            <h1>Order Placed Successfully!</h1>
+
+
+            <p class="text-muted mt-3">
+                Thank you for shopping with StyleHub.
+                Your order has been saved successfully.
+            </p>
+
+
+            <a
+                href="{% url 'store:product_list' %}"
+                class="btn btn-dark mt-3"
+            >
+                Continue Shopping
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

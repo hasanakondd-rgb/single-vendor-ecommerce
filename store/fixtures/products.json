@@ -1,0 +1,67 @@
+[
+{
+  "model": "store.product",
+  "pk": 1,
+  "fields": {
+    "name": "Men's Casual Shirt",
+    "category": "men",
+    "price": "800.00",
+    "description": "Designed for the modern man, this casual shirt perfectly balances a relaxed aesthetic with a sharp, tailored silhouette. Whether you are heading to a weekend brunch, a casual office day, or a sunset dinner, it keeps you looking cool and feeling completely at ease.",
+    "image": "products/Mens_Casual_Shirt.webp",
+    "quantity": 40,
+    "featured": true
+  }
+},
+{
+  "model": "store.product",
+  "pk": 2,
+  "fields": {
+    "name": "Women's Summer Dress",
+    "category": "women",
+    "price": "1999.00",
+    "description": "The ultimate blend of comfort and effortless femininity, this summer dress is designed to keep you cool when temperatures rise. Featuring a fluid silhouette that moves beautifully with every step, it is your new go-to for everything from morning farmers' markets to golden-hour beach strolls.",
+    "image": "products/Womens_Summer_Dress.jpg",
+    "quantity": 33,
+    "featured": true
+  }
+},
+{
+  "model": "store.product",
+  "pk": 3,
+  "fields": {
+    "name": "Denim Jacket",
+    "category": "men",
+    "price": "2499.00",
+    "description": "Striking the perfect balance between rugged utility and effortless streetwear style, this denim jacket is engineered to age beautifully and handle anything your day throws at it. Throw it over a casual t-shirt or layer it under a heavy coat—it is the ultimate year-round piece that never goes out of style.",
+    "image": "products/Denim_Jacket.avif",
+    "quantity": 25,
+    "featured": false
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "name": "Kids's Hoodie",
+    "category": "kids",
+    "price": "1899.00",
+    "description": "Whether they are running around the playground, heading to school, or curling up on the couch for movie night, this hoodie is built to keep up with their non-stop energy. It is the perfect blend of cloud-like softness and durable, kid-proof construction.",
+    "image": "products/Kidss_Hoodie.webp",
+    "quantity": 40,
+    "featured": true
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "name": "Lather Belt",
+    "category": "accessories",
+    "price": "1299.00",
+    "description": "Striking the perfect balance between rugged durability and refined elegance, this belt is an essential anchor for any wardrobe. Crafted from the finest materials, it is designed to mold comfortably to your waist and develop a beautiful, unique patina with every single wear.",
+    "image": "products/Lather_Belt.jpg",
+    "quantity": 17,
+    "featured": false
+  }
+}
+]
