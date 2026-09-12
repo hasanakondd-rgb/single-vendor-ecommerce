@@ -41,7 +41,7 @@ StyleHub is a simple single-vendor clothing e-commerce website developed using D
 
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/single-vendor-ecommerce.git
+git clone https://github.com/hasanakond-rgb/single-vendor-ecommerce.git
 cd single-vendor-ecommerce
 ```
 
@@ -58,7 +58,7 @@ Activate it on Windows:
 
 
 ```bash
-.venv\Scripts\activate
+.venv\Scripts\activate.ps1
 ```
 
 
